@@ -58,6 +58,10 @@ void stringIterInit(struct StringIterator *iter, char delim) {
     iter->delim = delim;
 }
 
+void stringIterReset(struct StringIterator *iter) {
+    iter->pos = 0;
+}
+
 const char *stringIterNext(struct StringIterator *iter, size_t *len) {
     if (iter->pos >= iter->size) {
         *len = 0;

@@ -20,6 +20,7 @@ struct StringIterator {
 };
 
 void stringIterInit(struct StringIterator *iter, char delim);
+void stringIterReset(struct StringIterator *iter);
 const char *stringIterNext(struct StringIterator *iter, size_t *len);
 const char *stringIterNextValid(struct StringIterator *iter, size_t *len);
 char stringIterNextParseUint64(struct StringIterator *iter, uint64_t *out_value);
